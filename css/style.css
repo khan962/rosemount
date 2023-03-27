@@ -1,11 +1,13 @@
 :root {
-  --accent-color: #1295ad;
-  --hover-color: #047940;
+  --accent-color: #6c491c;
+  --accent-hover: #533815;
   --background: #ecf3dce0;
   --secondary: #313131;
-  --logo: #6c491c;
-  --logo-hover: #533815;
   --rose: #ed1c24ff;
+  --alert-color: #977446;
+}
+.__text-rose {
+  color: var(--rose) !important;
 }
 h1,
 h2,
@@ -15,7 +17,7 @@ h5,
 h6,
 p,
 .nav-link {
-  color: var(--logo) !important;
+  color: var(--accent-color) !important;
 }
 body {
   background-color: var(--background);
@@ -52,7 +54,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0.5;
 }
 
 .nav-link {
@@ -80,14 +81,14 @@ nav ul li ul li a:hover {
 }
 
 .__color-logo {
-  color: var(--logo);
+  color: var(--accent-color);
 }
 .__btn-accent {
-  background-color: var(--logo);
+  background-color: var(--accent-color);
   color: #fff;
 }
 .__btn-accent:hover {
-  background-color: var(--logo-hover);
+  background-color: var(--accent-hover);
   color: #fff;
 }
 
@@ -116,6 +117,23 @@ nav ul li ul li a:hover {
 
 .__product-price {
   font-size: 14px;
+}
+
+.Instagram {
+  background-image: url("../img/parallax.jpg");
+  min-height: 200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.__insta-profile a {
+  text-decoration: none !important;
+  transition: all 700ms ease;
+}
+.__insta-profile a:hover {
+  color: var(--rose) !important;
 }
 @media (max-width: 992px) {
   .__desktop-container {
@@ -188,7 +206,7 @@ nav ul li ul li a:hover {
   transform: scale3d(1, 1, 1);
 }
 .__socail-icon {
-  color: var(--logo);
+  color: var(--accent-color);
   border-radius: 50%;
   background: none;
 }
@@ -199,8 +217,8 @@ nav ul li ul li a:hover {
 .__twitte:hover {
   color: #1d9bf0;
 }
-.__insta:hover {
-  color: #d3328b;
+.__whatsapp:hover {
+  color: #25d366;
 }
 .__linkedin:hover {
   color: #0072b1;
@@ -208,6 +226,11 @@ nav ul li ul li a:hover {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.__alert-accent {
+  color: #fff;
+  background-color: var(--alert-color);
+}
+
 .contact .info {
   padding: 30px;
   background: #fff;
@@ -218,7 +241,7 @@ nav ul li ul li a:hover {
 
 .contact .info i {
   font-size: 20px;
-  color: #009cea;
+  color: var(--accent-color);
   float: left;
   width: 44px;
   height: 44px;
@@ -264,15 +287,10 @@ nav ul li ul li a:hover {
   margin-right: 10px;
 }
 
-.contact .info .social-links a:hover {
-  background: #009cea;
-  color: #fff;
-}
-
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #009cea;
+  background: var(--accent-hover);
   color: #fff;
 }
 
@@ -351,19 +369,6 @@ nav ul li ul li a:hover {
 
 .contact .php-email-form textarea {
   padding: 10px 12px;
-}
-
-.contact .php-email-form button[type="submit"] {
-  background: #009cea;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-  background: #1eb4ff;
 }
 
 /* navbar */
